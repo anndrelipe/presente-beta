@@ -45,8 +45,8 @@ const getRandomImage = async () => {
         index = await getRandomIndex(9);
     }
     
-    const dataRef = await axios.get(`http://localhost:3000/get-imageData/card/${index}`);
-    const urlFrom = await axios.get(`http://localhost:3000/get-image/${dataRef.data.data.id}.jpeg`);
+    const dataRef = await axios.get(`https://presente-beta.onrender.com/get-imageData/card/${index}`);
+    const urlFrom = await axios.get(`https://presente-beta.onrender.com/${dataRef.data.data.id}.jpeg`);
 
     console.log(urlFrom.data.content)
 
