@@ -1,6 +1,6 @@
 <template>
     <section class="flex flex-col items-center justify-start h-screen pt-10">
-        <span class="text-xl mb-2 text-[#ff7393]">Seja bem-vinda a sua <span class="font-bold"> Maquina do Tempo!</span></span>
+        <span class="text-xl mb-2 text-[#ff7393]">Seja bem-vinda a sua <span class="text-xl mb-2 text-[#ff7393] font-bold"> Maquina do Tempo!</span></span>
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-6">
             <a href="#">
                 <img class="rounded-t-lg" :src="imageUrl" alt="" />
@@ -46,7 +46,7 @@ const getRandomImage = async () => {
     }
     
     const dataRef = await axios.get(`https://presente-beta.onrender.com/get-imageData/card/${index}`);
-    const urlFrom = await axios.get(`https://presente-beta.onrender.com//get-image/${dataRef.data.data.id}.jpeg`);
+    const urlFrom = await axios.get(`https://presente-beta.onrender.com/get-image/${dataRef.data.data.id}.jpeg`);
 
     console.log(urlFrom.data.content)
 
